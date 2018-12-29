@@ -17,7 +17,7 @@ const webpackConfig = {
 	module: {
 		rules: [{
 			test: /\.js$/,
-			use: [ 'babel-loader' ] 
+			loader: 'babel-loader'
 		}]
 	}
 }
