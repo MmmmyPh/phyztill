@@ -17,11 +17,11 @@ rm(path.resolve(rootPath, 'min', `${pkg.name}.min.js`), err => {
 	if (err) {
 		throw(err)
 	}
-	building.stop()
 	webpack(webpackConfig, function (err, stats) {
 		if (err) {
 			throw (err)
 		}
+		building.stop()
 		process.stdout.write(stats.toString({
 			colors: true,
 			modules: false,
